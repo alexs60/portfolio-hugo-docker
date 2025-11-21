@@ -1,0 +1,7 @@
+alessandrofarandagancio.com {
+    reverse_proxy portfolio:80
+}
+
+www.alessandrofarandagancio.com {
+    redir https://alessandrofarandagancio.com{uri}
+}

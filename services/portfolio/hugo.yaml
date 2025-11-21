@@ -1,0 +1,11 @@
+baseURL: "https://alessandrofarandagancio.com/"
+languageCode: "en-us"
+title: "Alessandro - Porfolio"
+theme: "hugo-coder"
+
+params:
+  author: "Alessandro Faranda Gancio"
+  info: "Software Engineer"
+  description: "My tech portfolio"
+  keywords: "architect,engineer,developer,personal"
+  avatar_url: "images/avatar.jpg"
