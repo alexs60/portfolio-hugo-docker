@@ -22,6 +22,12 @@ I use the native Hugo binary for local development to ensure fast feedback loops
     brew install hugo
     ```
 
+2.  **Initialize Theme Submodules:**
+    * Critical step to download the theme files.
+    ```bash
+    git submodule update --init --recursive
+    ```
+
 ### Running the Server
 1.  Navigate to the portfolio service:
     ```bash
@@ -37,3 +43,23 @@ I use the native Hugo binary for local development to ensure fast feedback loops
 1.  Edit content in `services/portfolio/content/`.
 2.  Edit config/layout in `services/portfolio/hugo.yaml`.
 3.  Commit and push changes to `main`.
+
+---
+
+## 🐳 Local Deployment (Docker)
+
+To run the full stack (Caddy + Nginx) locally as it runs in production:
+
+1.  **Initialize Submodules:**
+    *   Ensure the theme files are present before building the container.
+    ```bash
+    git submodule update --init --recursive
+    ```
+
+2.  **Build and Run:**
+    ```bash
+    docker compose up -d --build
+    ```
+
+3.  **Access:**
+    *   Site: `http://localhost`
