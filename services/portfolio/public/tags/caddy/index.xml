@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Caddy on Me 🚀 💻 🇮🇹</title>
+    <link>http://localhost:1313/tags/caddy/</link>
+    <description>Recent content in Caddy on Me 🚀 💻 🇮🇹</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/caddy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Portfolio Infrastructure</title>
+      <link>http://localhost:1313/projects/portfolio-infrastructure/</link>
+      <pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/portfolio-infrastructure/</guid>
+      <description>&lt;p&gt;A GitOps-based infrastructure for hosting static sites on low-cost VPS.&#xA;&lt;a href=&#34;https://github.com/alexs60/portfolio-hugo-docker&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View on GitHub&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
