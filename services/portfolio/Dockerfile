@@ -1,13 +1,16 @@
-# Stage 1: Build the static site
 FROM klakegg/hugo:ext-alpine AS builder
 WORKDIR /src
 COPY . .
-# Minify for performance
-RUN hugo --minify
 
-# Stage 2: Serve with lightweight Nginx
+RUN echo "--- SOURCE FILES ---" && ls -F
+
+RUN hugo --minify --destination /target -v || echo "Hugo Failed!"
+
+RUN echo "--- BUILT FILES ---" && ls -R /target
+
 FROM nginx:alpine
-# Copy compiled assets from Stage 1
-COPY --from=builder /src/public /usr/share/nginx/html
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=builder /target /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
