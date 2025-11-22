@@ -1,11 +1,46 @@
 baseURL: "https://alessandrofarandagancio.com/"
 languageCode: "en-us"
-title: "Alessandro - Porfolio"
+title: "Porfolio"
 theme: "hugo-coder"
+
+enableEmoji: true
+pygmentsStyle: "bw"
+pygmentsCodeFences: true
+pygmentsCodeFencesGuessSyntax: true
 
 params:
   author: "Alessandro Faranda Gancio"
   info: "Software Engineer"
   description: "My tech portfolio"
   keywords: "architect,engineer,developer,personal"
-  avatar_url: "images/avatar.jpg"
+
+  # Look & Feel
+  color_scheme: "auto"
+  hide_footer: false
+  rtl: false
+  # customCSS: ["css/split-layout.css"]
+
+  # Social Icons (Footer/Sidebar)
+  social:
+    - name: "Github"
+      icon: "fa fa-2x fa-github"
+      weight: 1
+      url: "https://github.com/alexs60"
+    - name: "LinkedIn"
+      icon: "fa fa-2x fa-linkedin"
+      weight: 2
+      url: "https://www.linkedin.com/in/alessandrofarandagancio/"
+    - name: "Twitter"
+      icon: "fa fa-2x fa-twitter"
+      weight: 3
+      url: "https://twitter.com/alefaranda/"
+
+# Navigation Bar
+menu:
+  main:
+    - name: "About"
+      weight: 1
+      url: "about/"
+    - name: "Projects"
+      weight: 2
+      url: "projects/"
