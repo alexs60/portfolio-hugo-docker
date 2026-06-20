@@ -24,6 +24,15 @@ services:
     networks:
       - webnet
 
+  gancio:
+    build: ./services/gancio
+    container_name: gancio
+    restart: always
+    expose:
+      - "80"
+    networks:
+      - webnet
+
 networks:
   webnet:
     driver: bridge

@@ -5,3 +5,10 @@ alessandrofarandagancio.com {
 www.alessandrofarandagancio.com {
     redir https://alessandrofarandagancio.com{uri}
 }
+gancio.xyz {
+    reverse_proxy gancio:80
+}
+
+www.gancio.xyz {
+    redir https://gancio.xyz{uri}
+}
