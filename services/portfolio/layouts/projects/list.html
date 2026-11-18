@@ -1,0 +1,22 @@
+{{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
+{{ define "content" }}
+<section class="container projects">
+  <header>
+    <h1 class="title"><a class="title-link" href="{{ .Permalink | safeURL }}">{{ .Title }}</a></h1>
+  </header>
+  <div class="projects-intro">{{ .Content }}</div>
+  {{ $pages := .Pages }}
+  {{ range .Params.groups }}
+    {{ $g := . }}
+    {{ with where $pages "Params.group" $g.key }}
+    <section class="project-group" id="{{ $g.key }}">
+      <h2>{{ $g.title }}</h2>
+      {{ with $g.intro }}<p class="group-intro">{{ . | markdownify }}</p>{{ end }}
+      <div class="project-grid">
+        {{ range .ByWeight }}{{ partial "project-card.html" . }}{{ end }}
+      </div>
+    </section>
+    {{ end }}
+  {{ end }}
+</section>
+{{ end }}

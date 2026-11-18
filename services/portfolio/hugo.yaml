@@ -18,7 +18,7 @@ params:
   color_scheme: "auto"
   hide_footer: false
   rtl: false
-  # customCSS: ["css/split-layout.css"]
+  customCSS: ["css/projects.css"]
 
   # Social Icons (Footer/Sidebar)
   social:

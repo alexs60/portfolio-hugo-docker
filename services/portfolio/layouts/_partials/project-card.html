@@ -1,0 +1,10 @@
+<article class="project-card">
+  <div class="project-head">
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Params.status }}<span class="project-status">{{ . }}</span>{{ end }}
+  </div>
+  {{ with .Params.role }}<p class="project-role">{{ . }}</p>{{ end }}
+  <p class="project-summary">{{ .Summary }}</p>
+  {{ with .Params.tags }}<ul class="project-stack">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+  {{ with .Params.links }}<p class="project-links">{{ range . }}<a href="{{ .url }}" rel="noopener">{{ .name }} ↗</a>{{ end }}</p>{{ end }}
+</article>

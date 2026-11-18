@@ -1,0 +1,23 @@
+{{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
+{{ define "content" }}
+<section class="container page project">
+  <article>
+    <header>
+      <h1 class="title"><a class="title-link" href="{{ .Permalink | safeURL }}">{{ .Title }}</a></h1>
+      {{ if or .Params.role .Params.status }}
+      <p class="project-meta">
+        {{ with .Params.role }}<span>{{ . }}</span>{{ end }}
+        {{ with .Params.status }}<span class="project-status">{{ . }}</span>{{ end }}
+      </p>
+      {{ end }}
+    </header>
+    <p class="project-lede">{{ .Summary }}</p>
+    {{ .Content }}
+    {{ with .GetTerms "tags" }}
+    <ul class="project-stack">{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}</ul>
+    {{ end }}
+    {{ with .Params.links }}<p class="project-links">{{ range . }}<a href="{{ .url }}" rel="noopener">{{ .name }} ↗</a>{{ end }}</p>{{ end }}
+    <p class="project-back"><a href="{{ "projects/" | relURL }}">← All projects</a></p>
+  </article>
+</section>
+{{ end }}
